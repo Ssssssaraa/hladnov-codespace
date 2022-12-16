@@ -1,14 +1,22 @@
 .pole {
   border: 1px solid black;
-  height: 10px;
-  width: 10px;
+  height: 45px;
+  width: 45px;
   display: inline-block;
 }
 
 .had {
-  background: lime;
+  background: rgb(104, 216, 104);
 }
 
 body {
   overflow: hidden;
+}
+
+.zradlo {
+  background-color: lightcoral;
+}
+
+.had .zradlo {
+
 }
