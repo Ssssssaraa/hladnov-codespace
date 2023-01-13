@@ -1,7 +1,7 @@
-let had = [document.querySelector ("had")]
+let had = [document.querySelector(".had")]
 
-function pohniHadem(dolu, doprava){ 
-  const hadiHlava = had [0]
+function pohniHadem(dolu, doprava) {
+  const hadiHlava = had[0]
   console.log("Had je na " + hadiHlava.id);
 
   let radek = parseInt(hadiHlava.id.split(":")[0]);
@@ -11,18 +11,19 @@ function pohniHadem(dolu, doprava){
 
   const cilovePolicko = document.getElementById(idCil);
 
-  had.unshift (cilovePolicko);
+  had.unshift(cilovePolicko);
 
-  cilovePolicko.classList.add("had")
+  cilovePolicko.classList.add("had");
 
-if (cilovePolicko.classList.contains("zradlo")) {
-  console.log ("had bude zrat");
-  cilovePolicko.classList.remove("zradlo")}
-else{ 
-  const polickokterePrestaneBythadem = had.pop();
-  polickokterePrestaneBythadem.classList.remove("had");
+  if (cilovePolicko.classList.contains("zradlo")) {
+    console.log("Had bude žrát");
+    cilovePolicko.classList.remove("zradlo");
+  } else {
+    const polickoKterePrestavaBytHadem = had.pop();
+    polickoKterePrestavaBytHadem.classList.remove("had");
   }
 }
+
 function pohyb(udalost) {
   if (udalost.which === 37) {
     console.log("Hade, jdi doleva pls");
